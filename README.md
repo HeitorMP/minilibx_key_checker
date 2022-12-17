@@ -6,4 +6,4 @@ I wrote this to help me with so_long project from 42!
 Install dependencies:
 sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-dev
 
-And then just run make and then ./key_checker.
+Run make and then ./key_checker.
