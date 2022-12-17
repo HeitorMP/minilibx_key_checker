@@ -7,5 +7,3 @@ Install dependencies:
 sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-dev
 
 And then just run make and then ./key_checker.
-
-To exit the program just CTRL + C at terminal.
