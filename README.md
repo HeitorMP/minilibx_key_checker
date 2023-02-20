@@ -7,6 +7,8 @@ This program was my first contact with the minilix library and I wrote it to hel
 ```bash
 sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-dev
 ```
+
+# Install and run:
 ```bash
 make
 ```
