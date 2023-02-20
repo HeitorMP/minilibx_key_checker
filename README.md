@@ -6,5 +6,11 @@ This program was my first contact with the minilix library and I wrote it to hel
 # Install dependencies:
 ```bash
 sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-dev
-make 
-./key_checker.```
+```
+```bash
+make
+```
+
+```bash
+./key_checker
+```
