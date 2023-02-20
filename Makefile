@@ -2,10 +2,9 @@
 CC=cc
 
 all:
-	cc -I.. -g -c -o key_checker.o key_checker.c
-	cc -o key_checker key_checker.o -L./mlx -lmlx -lXext -lX11 -lm -lbsd
+	cc -o key_checker key_checker.c -L./mlx -lmlx -lXext -lX11 -lm -lbsd
 clean: 
-	rm -rf *.o
+	rm -rf key_checker
 fclean: clean
 	rm -rf key_checker
 re: fclean all

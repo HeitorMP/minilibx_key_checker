@@ -6,7 +6,7 @@
 /*   By: hmaciel- <hmaciel-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 12:24:14 by hmaciel-          #+#    #+#             */
-/*   Updated: 2022/12/08 12:24:34 by hmaciel-         ###   ########.fr       */
+/*   Updated: 2023/02/20 11:01:15 by hmaciel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,13 @@ int	action(int keycode, t_vars *vars)
 	return (0);
 }
 
-int ft_program_close(void)
+int ft_program_close(t_vars *vars)
 {
 	write(1, "BYE", 3);
-	exit(EXIT_FAILURE);
+	mlx_destroy_window(vars->mlx, vars->win);
+	mlx_destroy_display(vars->mlx);
+	free(vars->mlx);
+	exit(EXIT_SUCCESS);
 }
 
 int	main(void)
@@ -40,7 +43,7 @@ int	main(void)
 	vars.win = mlx_new_window(vars.mlx, 200, 200, "key checker"); // cria a janela
 
 	mlx_key_hook(vars.win, action, &vars);
-	mlx_hook(vars.win, 17, 0, ft_program_close, NULL);
+	mlx_hook(vars.win, 17, 0, ft_program_close, &vars);
 	mlx_loop(vars.mlx);
 	mlx_clear_window(vars.mlx, vars.win);
 }
